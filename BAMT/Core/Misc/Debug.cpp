@@ -128,7 +128,7 @@ namespace Debug
     {
         Log("Starting Command Input Thread...");
         // Null data to make SDL_CreateThread work.
-        int data = 0;
+        constexpr int data = 0;
         ConsoleThread = SDL_CreateThread(Debug::ConsoleGetCommandInput, "Console Thread", reinterpret_cast<void*>(data));
     }
     void StopCommandThread()

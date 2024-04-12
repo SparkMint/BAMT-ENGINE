@@ -43,7 +43,7 @@ namespace VectorMath
 
 	bool OverlapOnAxis(float pos1, float bounds1, float pos2, float bounds2);
 
-	Vector2 Rotate(Vector2& direction, float angle);
+	Vector2 Rotate(const Vector2& direction, float angle);
 }
 
 class Transform : public Component

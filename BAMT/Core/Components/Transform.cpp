@@ -6,8 +6,8 @@ namespace VectorMath
 {
 	float Distance(const Vector2& v1, const Vector2& v2)
 	{
-		const float x = pow(v2.x - v1.x, 2);
-		const float y = pow(v2.y - v1.y, 2);
+		const float x = (float)pow(v2.x - v1.x, 2);
+		const float y = (float)pow(v2.y - v1.y, 2);
 		return sqrt(x + y);
 	}
 
@@ -21,7 +21,7 @@ namespace VectorMath
 		const float magnitude = Magnitude(vector);
 
 		// If the Magnitude is zero. Return Zero.
-		if (magnitude == 0)	return { 0,0 };
+		if (magnitude == 0.f) return { 0,0 };
 
 		return { vector.x / magnitude, vector.y / magnitude };
 	}
@@ -31,7 +31,7 @@ namespace VectorMath
 		return sqrt(vector.x * vector.x + vector.y * vector.y);
 	}
 
-	bool OverlapOnAxis(float pos1, float bounds1, float pos2, float bounds2)
+	bool OverlapOnAxis(const float pos1, const float bounds1, const float pos2, const float bounds2)
 	{
 		const auto pos1Min = pos1 - bounds1 * 0.5f;
 		const auto pos1Max = pos1 + bounds1 * 0.5f;
@@ -46,15 +46,15 @@ namespace VectorMath
 		return true;
 	}
 
-	Vector2 Rotate(Vector2& direction, float angle)
+	Vector2 Rotate(const Vector2& direction, const float angle)
 	{
 		// Get the cos and sin of the given angle.
-		float cosAngle = cos(angle);
-		float sinAngle = sin(angle);
+		const float cosAngle = cos(angle);
+		const float sinAngle = sin(angle);
 
 		// Use those to rotate the vector.
-		float newX = direction.x * cosAngle - direction.y * sinAngle;
-		float newY = direction.x * sinAngle + direction.y * cosAngle;
+		const float newX = direction.x * cosAngle - direction.y * sinAngle;
+		const float newY = direction.x * sinAngle + direction.y * cosAngle;
 
 		// Return it!
 		return { newX, newY };
@@ -63,7 +63,9 @@ namespace VectorMath
 
 bool Vector2::operator==(const Vector2& vector) const
 {
-	return this->x == vector.x && this->y == vector.y;
+	// Since floats arent always 100% accurate, we need to use a tolerance.
+	constexpr float tolerance = 1e-5f; 
+	return fabs(this->x - vector.x) < tolerance && fabs(this->y - vector.y) < tolerance;
 }
 
 Vector2 Vector2::operator-(const Vector2& vector) const
@@ -97,29 +99,29 @@ Vector2 Vector2::operator+(const Vector2& vector) const
 	return { this->x + vector.x, this->y + vector.x };
 }
 
-Transform::Transform(float x, float y) : _position(new Vector2{ x, y }){ }
+Transform::Transform(const float x, const float y) : _position(new Vector2{ x, y }){ }
 
-void Transform::SetX(float x) const { _position->x = x; }
+void Transform::SetX(const float x) const { _position->x = x; }
 
-void Transform::SetY(float y) const { _position->y = y; }
+void Transform::SetY(const float y) const { _position->y = y; }
 
 float Transform::GetX() const { return _position->x; }
 
 float Transform::GetY() const { return _position->y; }
 
-void Transform::Translate(int x, int y) const
+void Transform::Translate(const int x, const int y) const
+{
+	_position->x += (float)x;
+	_position->y += (float)y;
+}
+
+void Transform::Translate(const float x, const float y) const
 {
 	_position->x += x;
 	_position->y += y;
 }
 
-void Transform::Translate(float x, float y) const
-{
-	_position->x += x;
-	_position->y += y;
-}
-
-void Transform::SetPosition(float x, float y) const
+void Transform::SetPosition(const float x, const float y) const
 {
 	_position->x = x;
 	_position->y = y;
