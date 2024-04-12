@@ -1,0 +1,26 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Fortran module files
+*.mod
+*.smod
+
+# Visual Studio cache directory
+.vs/
+*.vs
+
+# Executables
+*.exe
+*.out
+*.app
+
+*discord.xml
+
+# IntelliJ cache directory
+.idea/
