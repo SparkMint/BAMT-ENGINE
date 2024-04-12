@@ -1,0 +1,49 @@
+﻿  EnemyHealth.cpp
+  EnemyMovement.cpp
+  EntityPooler.cpp
+  Health.cpp
+  KeyboardMovement.cpp
+  MouseAim.cpp
+  Projectile.cpp
+  EnemyWeapon.cpp
+  PlayerWeapon.cpp
+  Weapon.cpp
+  Enemy.cpp
+  Player.cpp
+  Slingshot.cpp
+  StaticCollider.cpp
+  PinballGame.cpp
+  PinballGameLevel.cpp
+  SplashScreen.cpp
+C:\BAMT\BAMT\Core\ECS\Entity.h(102,34): warning C4244: 'argument': conversion from '_Ty' to 'float', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+C:\BAMT\BAMT\Assignment\Scenes\SplashScreen.cpp(25): message : see reference to function template instantiation 'T *Entity::AddComponent<SpriteRenderer,int,int,const char(&)[21]>(int &&,int &&,const char (&)[21])' being compiled
+          with
+          [
+              T=SpriteRenderer
+          ]
+  PhysicsTestScene.cpp
+  LineRenderer.cpp
+  RectRenderer.cpp
+C:\BAMT\BAMT\Core\Components\RectRenderer.cpp(20,37): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\BAMT\BAMT\Core\Components\RectRenderer.cpp(21,38): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\BAMT\BAMT\Core\Components\RectRenderer.cpp(23,96): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\BAMT\BAMT\Core\Components\RectRenderer.cpp(24,96): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  Generating Code...
+  Compiling...
+  RigidBody.cpp
+  SpriteRenderer.cpp
+C:\BAMT\BAMT\Core\Components\SpriteRenderer.cpp(31,42): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\BAMT\BAMT\Core\Components\SpriteRenderer.cpp(32,43): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\BAMT\BAMT\Core\Components\SpriteRenderer.cpp(34,99): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\BAMT\BAMT\Core\Components\SpriteRenderer.cpp(35,99): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  Scene.cpp
+  EngineManager.cpp
+  CoordinateGrid.cpp
+  Input.cpp
+  Main.cpp
+  Generating Code...
+  BAMT.vcxproj -> C:\BAMT\x64\Debug\BAMT.exe

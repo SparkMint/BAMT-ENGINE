@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Core\Components\RectRenderer.cpp" />
+    <ClCompile Include="Core\Components\Renderer.cpp" />
+    <ClCompile Include="Core\Components\RigidBody.cpp" />
+    <ClCompile Include="Core\Components\Transform.cpp" />
+    <ClCompile Include="Core\Components\TriRenderer.cpp" />
+    <ClCompile Include="Core\ECS\Component.cpp" />
+    <ClCompile Include="Core\ECS\Entity.cpp" />
+    <ClCompile Include="Core\ECS\Scene.cpp" />
+    <ClCompile Include="Core\Entities\CoordinateGrid.cpp" />
+    <ClCompile Include="Core\Misc\Colour.cpp" />
+    <ClCompile Include="Core\Misc\Debug.cpp" />
+    <ClCompile Include="Core\Misc\Input.cpp" />
+    <ClCompile Include="Core\Misc\TickTimer.cpp" />
+    <ClCompile Include="Core\EngineManager.cpp" />
+    <ClCompile Include="Assignment\Scenes\Test\PhysicsTestScene.cpp" />
+    <ClCompile Include="Assignment\Scenes\AssignmentGame.cpp" />
+    <ClCompile Include="Assignment\Scenes\AssignmentGameLevel.cpp" />
+    <ClCompile Include="Assignment\Entities\Player.cpp" />
+    <ClCompile Include="Assignment\Components\KeyboardMovement.cpp" />
+    <ClCompile Include="Core\Entities\StaticCollider.cpp" />
+    <ClCompile Include="Assignment\Scenes\SplashScreen.cpp" />
+    <ClCompile Include="Core\Components\SpriteRenderer.cpp" />
+    <ClCompile Include="Core\Components\LineRenderer.cpp" />
+    <ClCompile Include="Core\Misc\AssetWarehouse.cpp" />
+    <ClCompile Include="Core\Misc\BamtMath.cpp" />
+    <ClCompile Include="Assignment\Components\MouseAim.cpp" />
+    <ClCompile Include="Assignment\Components\WeaponSystem\Weapon.cpp" />
+    <ClCompile Include="Core\Components\EntityPooler.cpp" />
+    <ClCompile Include="Assignment\Components\Projectile.cpp" />
+    <ClCompile Include="Assignment\Components\WeaponSystem\PlayerWeapon.cpp" />
+    <ClCompile Include="Assignment\Components\WeaponSystem\EnemyWeapon.cpp" />
+    <ClCompile Include="Assignment\Entities\Enemy.cpp" />
+    <ClCompile Include="Assignment\Components\EnemyMovement.cpp" />
+    <ClCompile Include="Assignment\Components\HealthSystem\Health.cpp" />
+    <ClCompile Include="Assignment\Components\HealthSystem\EnemyHealth.cpp" />
+    <ClCompile Include="Assignment\Components\Powerup.cpp" />
+    <ClCompile Include="Assignment\Components\PowerupReciever.cpp" />
+    <ClCompile Include="Assignment\Components\ScoreSystem.cpp" />
+    <ClCompile Include="Assignment\Components\HealthSystem\PlayerHealth.cpp" />
+    <ClCompile Include="Core\Components\TextRenderer.cpp" />
+    <ClCompile Include="Assignment\Components\EnemySpawnSystem.cpp" />
+    <ClCompile Include="Assignment\Entities\GameManager.cpp" />
+    <ClCompile Include="Assignment\Components\TimeSystem.cpp" />
+    <ClCompile Include="Core\Components\TrailRenderer.cpp" />
+    <ClCompile Include="Assignment\Components\UIManager.cpp" />
+    <ClCompile Include="Core\Components\Animator.cpp" />
+    <ClCompile Include="Assignment\Components\PlayerAnimationSystem.cpp" />
+    <ClCompile Include="Assignment\Components\EnemyAnimationSystem.cpp" />
+    <ClCompile Include="Core\Components\AudioSource.cpp" />
+    <ClCompile Include="Core\Misc\AudioManager.cpp" />
+    <ClCompile Include="Core\Components\MusicSource.cpp" />
+    <ClCompile Include="Assignment\Scenes\AssignmentMenu.cpp" />
+    <ClCompile Include="Core\Components\Button.cpp" />
+    <ClCompile Include="Assignment\Components\MouseFollow.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="BAMT.APS" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Core\Components\RectRenderer.h" />
+    <ClInclude Include="Core\Components\Renderer.h" />
+    <ClInclude Include="Core\Components\RigidBody.h" />
+    <ClInclude Include="Core\Components\Transform.h" />
+    <ClInclude Include="Core\Components\TriRenderer.h" />
+    <ClInclude Include="Core\ECS\Component.h" />
+    <ClInclude Include="Core\ECS\Entity.h" />
+    <ClInclude Include="Core\ECS\Scene.h" />
+    <ClInclude Include="Core\Entities\CoordinateGrid.h" />
+    <ClInclude Include="Core\Misc\Colour.h" />
+    <ClInclude Include="Core\Misc\Debug.h" />
+    <ClInclude Include="Core\Misc\Input.h" />
+    <ClInclude Include="Core\Misc\TickTimer.h" />
+    <ClInclude Include="Core\EngineManager.h" />
+    <ClInclude Include="Core\EngineSettings.h" />
+    <ClInclude Include="Assignment\Scenes\Test\PhysicsTestScene.h" />
+    <ClInclude Include="Assignment\Scenes\AssignmentGame.h" />
+    <ClInclude Include="Assignment\Scenes\AssignmentGameLevel.h" />
+    <ClInclude Include="Assignment\Entities\Player.h" />
+    <ClInclude Include="Assignment\Components\KeyboardMovement.h" />
+    <ClInclude Include="Core\Entities\StaticCollider.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="Assignment\Scenes\SplashScreen.h" />
+    <ClInclude Include="Core\Components\SpriteRenderer.h" />
+    <ClInclude Include="Core\Components\LineRenderer.h" />
+    <ClInclude Include="Core\Misc\AssetWarehouse.h" />
+    <ClInclude Include="Core\Misc\BamtMath.h" />
+    <ClInclude Include="Assignment\Components\MouseAim.h" />
+    <ClInclude Include="Assignment\Components\WeaponSystem\Weapon.h" />
+    <ClInclude Include="Assignment\Components\Projectile.h" />
+    <ClInclude Include="Core\Components\EntityPooler.h" />
+    <ClInclude Include="Assignment\Components\WeaponSystem\PlayerWeapon.h" />
+    <ClInclude Include="Assignment\Components\WeaponSystem\WeaponData.h" />
+    <ClInclude Include="Assignment\Entities\Enemy.h" />
+    <ClInclude Include="Assignment\Components\WeaponSystem\EnemyWeapon.h" />
+    <ClInclude Include="Assignment\Components\EnemyMovement.h" />
+    <ClInclude Include="Assignment\Components\HealthSystem\Health.h" />
+    <ClInclude Include="Assignment\Components\HealthSystem\EnemyHealth.h" />
+    <ClInclude Include="Assignment\Components\Powerup.h" />
+    <ClInclude Include="Assignment\Components\PowerupReciever.h" />
+    <ClInclude Include="Assignment\Components\ScoreSystem.h" />
+    <ClInclude Include="Assignment\Components\HealthSystem\PlayerHealth.h" />
+    <ClInclude Include="Core\Components\TextRenderer.h" />
+    <ClInclude Include="Assignment\Entities\GameManager.h" />
+    <ClInclude Include="Assignment\Components\EnemySpawnSystem.h" />
+    <ClInclude Include="Assignment\Components\TimeSystem.h" />
+    <ClInclude Include="Core\Components\TrailRenderer.h" />
+    <ClInclude Include="Assignment\Components\UIManager.h" />
+    <ClInclude Include="Core\Components\Animator.h" />
+    <ClInclude Include="Assignment\Components\PlayerAnimationSystem.h" />
+    <ClInclude Include="Assignment\Components\EnemyAnimationSystem.h" />
+    <ClInclude Include="Core\Components\AudioSource.h" />
+    <ClInclude Include="Assignment\Entities\EnemyZombie.h" />
+    <ClInclude Include="Assignment\Components\EnemyData.h" />
+    <ClInclude Include="Core\Misc\AudioManager.h" />
+    <ClInclude Include="Core\Components\MusicSource.h" />
+    <ClInclude Include="Assignment\Scenes\AssignmentMenu.h" />
+    <ClInclude Include="Core\Components\Button.h" />
+    <ClInclude Include="Assignment\Components\MouseFollow.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="BAMT.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\Icons\BAMT Logo.bmp" />
+    <Image Include="Assets\Icons\Logo.png" />
+    <Image Include="Assets\Icons\TaskbarIcon.png" />
+  </ItemGroup>
+</Project>

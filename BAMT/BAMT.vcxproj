@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{aff03170-99e5-4990-ab1e-327c75ef513c}</ProjectGuid>
+    <RootNamespace>BAMT</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <PublicIncludeDirectories>$(ProjectDir)Core;$(ProjectDir)Core/ECS;$(ProjectDir)Core/Entities;$(ProjectDir)Core/Components;$(ProjectDir)Core/Scenes;$(ProjectDir)Core/Misc;$(PublicIncludeDirectories)</PublicIncludeDirectories>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)Core;$(ProjectDir)Core/ECS;$(ProjectDir)Core/Entities;$(ProjectDir)Core/Components;$(ProjectDir)Core/Scenes;$(ProjectDir)Core/Misc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Assignment\Components\EnemyAnimationSystem.cpp" />
+    <ClCompile Include="Assignment\Components\EnemySpawnSystem.cpp" />
+    <ClCompile Include="Assignment\Components\HealthSystem\EnemyHealth.cpp" />
+    <ClCompile Include="Assignment\Components\HealthSystem\Health.cpp" />
+    <ClCompile Include="Assignment\Components\MouseAim.cpp" />
+    <ClCompile Include="Assignment\Components\MouseFollow.cpp" />
+    <ClCompile Include="Assignment\Components\PlayerAnimationSystem.cpp" />
+    <ClCompile Include="Assignment\Components\TimeSystem.cpp" />
+    <ClCompile Include="Assignment\Components\UIManager.cpp" />
+    <ClCompile Include="Assignment\Entities\GameManager.cpp" />
+    <ClCompile Include="Assignment\Scenes\AssignmentMenu.cpp" />
+    <ClCompile Include="Core\Components\Animator.cpp" />
+    <ClCompile Include="Core\Components\AudioSource.cpp" />
+    <ClCompile Include="Core\Components\Button.cpp" />
+    <ClCompile Include="Core\Components\EntityPooler.cpp" />
+    <ClCompile Include="Assignment\Components\EnemyMovement.cpp" />
+    <ClCompile Include="Assignment\Components\HealthSystem\PlayerHealth.cpp" />
+    <ClCompile Include="Assignment\Components\Powerup.cpp" />
+    <ClCompile Include="Assignment\Components\PowerupReciever.cpp" />
+    <ClCompile Include="Assignment\Components\ScoreSystem.cpp" />
+    <ClCompile Include="Assignment\Components\WeaponSystem\EnemyWeapon.cpp" />
+    <ClCompile Include="Assignment\Components\WeaponSystem\PlayerWeapon.cpp" />
+    <ClCompile Include="Assignment\Components\WeaponSystem\Weapon.cpp" />
+    <ClCompile Include="Assignment\Components\Projectile.cpp" />
+    <ClCompile Include="Assignment\Entities\Enemy.cpp" />
+    <ClCompile Include="Assignment\Scenes\Test\PhysicsTestScene.cpp" />
+    <ClCompile Include="Assignment\Scenes\AssignmentGame.cpp" />
+    <ClCompile Include="Assignment\Scenes\AssignmentGameLevel.cpp" />
+    <ClCompile Include="Assignment\Entities\Player.cpp" />
+    <ClCompile Include="Assignment\Components\KeyboardMovement.cpp" />
+    <ClCompile Include="Core\Components\MusicSource.cpp" />
+    <ClCompile Include="Core\Components\TrailRenderer.cpp" />
+    <ClCompile Include="Core\Entities\StaticCollider.cpp" />
+    <ClCompile Include="Core\Components\LineRenderer.cpp" />
+    <ClCompile Include="Core\Components\SpriteRenderer.cpp" />
+    <ClCompile Include="Core\Components\RectRenderer.cpp" />
+    <ClCompile Include="Core\Components\Renderer.cpp" />
+    <ClCompile Include="Core\Components\RigidBody.cpp" />
+    <ClCompile Include="Core\Components\TextRenderer.cpp" />
+    <ClCompile Include="Core\Components\Transform.cpp" />
+    <ClCompile Include="Core\Components\TriRenderer.cpp" />
+    <ClCompile Include="Core\ECS\Component.cpp" />
+    <ClCompile Include="Core\ECS\Entity.cpp" />
+    <ClCompile Include="Core\ECS\Scene.cpp" />
+    <ClCompile Include="Core\EngineManager.cpp" />
+    <ClCompile Include="Core\Entities\CoordinateGrid.cpp" />
+    <ClCompile Include="Core\Misc\AudioManager.cpp" />
+    <ClCompile Include="Core\Misc\BamtMath.cpp" />
+    <ClCompile Include="Core\Misc\Colour.cpp" />
+    <ClCompile Include="Core\Misc\Debug.cpp" />
+    <ClCompile Include="Core\Misc\Input.cpp" />
+    <ClCompile Include="Core\Misc\AssetWarehouse.cpp" />
+    <ClCompile Include="Core\Misc\TickTimer.cpp" />
+    <ClCompile Include="Assignment\Scenes\SplashScreen.cpp" />
+    <ClCompile Include="Main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BAMT.APS" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Assignment\Components\EnemyAnimationSystem.h" />
+    <ClInclude Include="Assignment\Components\EnemyData.h" />
+    <ClInclude Include="Assignment\Components\EnemySpawnSystem.h" />
+    <ClInclude Include="Assignment\Components\HealthSystem\EnemyHealth.h" />
+    <ClInclude Include="Assignment\Components\EnemyMovement.h" />
+    <ClInclude Include="Assignment\Components\MouseFollow.h" />
+    <ClInclude Include="Assignment\Components\PlayerAnimationSystem.h" />
+    <ClInclude Include="Assignment\Components\TimeSystem.h" />
+    <ClInclude Include="Assignment\Components\UIManager.h" />
+    <ClInclude Include="Assignment\Entities\EnemyZombie.h" />
+    <ClInclude Include="Assignment\Scenes\AssignmentMenu.h" />
+    <ClInclude Include="Core\Components\Animator.h" />
+    <ClInclude Include="Core\Components\AudioSource.h" />
+    <ClInclude Include="Core\Components\Button.h" />
+    <ClInclude Include="Core\Components\EntityPooler.h" />
+    <ClInclude Include="Assignment\Components\HealthSystem\Health.h" />
+    <ClInclude Include="Assignment\Components\MouseAim.h" />
+    <ClInclude Include="Assignment\Components\HealthSystem\PlayerHealth.h" />
+    <ClInclude Include="Assignment\Components\PowerupReciever.h" />
+    <ClInclude Include="Assignment\Components\Powerup.h" />
+    <ClInclude Include="Assignment\Components\ScoreSystem.h" />
+    <ClInclude Include="Assignment\Components\WeaponSystem\EnemyWeapon.h" />
+    <ClInclude Include="Assignment\Components\WeaponSystem\PlayerWeapon.h" />
+    <ClInclude Include="Assignment\Components\WeaponSystem\Weapon.h" />
+    <ClInclude Include="Assignment\Components\Projectile.h" />
+    <ClInclude Include="Assignment\Components\WeaponSystem\WeaponData.h" />
+    <ClInclude Include="Assignment\Entities\Enemy.h" />
+    <ClInclude Include="Assignment\Entities\GameManager.h" />
+    <ClInclude Include="Assignment\Scenes\Test\PhysicsTestScene.h" />
+    <ClInclude Include="Assignment\Scenes\AssignmentGame.h" />
+    <ClInclude Include="Assignment\Scenes\AssignmentGameLevel.h" />
+    <ClInclude Include="Assignment\Entities\Player.h" />
+    <ClInclude Include="Assignment\Components\KeyboardMovement.h" />
+    <ClInclude Include="Core\Components\MusicSource.h" />
+    <ClInclude Include="Core\Components\TrailRenderer.h" />
+    <ClInclude Include="Core\Entities\StaticCollider.h" />
+    <ClInclude Include="Core\Components\LineRenderer.h" />
+    <ClInclude Include="Core\Components\SpriteRenderer.h" />
+    <ClInclude Include="Core\Components\RectRenderer.h" />
+    <ClInclude Include="Core\Components\Renderer.h" />
+    <ClInclude Include="Core\Components\RigidBody.h" />
+    <ClInclude Include="Core\Components\TextRenderer.h" />
+    <ClInclude Include="Core\Components\Transform.h" />
+    <ClInclude Include="Core\Components\TriRenderer.h" />
+    <ClInclude Include="Core\ECS\Component.h" />
+    <ClInclude Include="Core\ECS\Entity.h" />
+    <ClInclude Include="Core\ECS\Scene.h" />
+    <ClInclude Include="Core\EngineManager.h" />
+    <ClInclude Include="Core\EngineSettings.h" />
+    <ClInclude Include="Core\Entities\CoordinateGrid.h" />
+    <ClInclude Include="Core\Misc\AudioManager.h" />
+    <ClInclude Include="Core\Misc\BamtMath.h" />
+    <ClInclude Include="Core\Misc\Colour.h" />
+    <ClInclude Include="Core\Misc\Debug.h" />
+    <ClInclude Include="Core\Misc\Input.h" />
+    <ClInclude Include="Core\Misc\AssetWarehouse.h" />
+    <ClInclude Include="Core\Misc\TickTimer.h" />
+    <ClInclude Include="Assignment\Scenes\SplashScreen.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="BAMT.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\Icons\BAMT Logo.bmp" />
+    <Image Include="Assets\Icons\Logo.png" />
+    <Image Include="Assets\Icons\TaskbarIcon.png" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\packages\sdl2.redist.2.0.5\build\native\sdl2.redist.targets" Condition="Exists('..\packages\sdl2.redist.2.0.5\build\native\sdl2.redist.targets')" />
+    <Import Project="..\packages\sdl2.2.0.5\build\native\sdl2.targets" Condition="Exists('..\packages\sdl2.2.0.5\build\native\sdl2.targets')" />
+    <Import Project="..\packages\sdl2_image.nuget.redist.2.6.3\build\native\sdl2_image.nuget.redist.targets" Condition="Exists('..\packages\sdl2_image.nuget.redist.2.6.3\build\native\sdl2_image.nuget.redist.targets')" />
+    <Import Project="..\packages\sdl2_image.nuget.2.6.3\build\native\sdl2_image.nuget.targets" Condition="Exists('..\packages\sdl2_image.nuget.2.6.3\build\native\sdl2_image.nuget.targets')" />
+    <Import Project="..\packages\sdl2_ttf.nuget.redist.2.20.2\build\native\sdl2_ttf.nuget.redist.targets" Condition="Exists('..\packages\sdl2_ttf.nuget.redist.2.20.2\build\native\sdl2_ttf.nuget.redist.targets')" />
+    <Import Project="..\packages\sdl2_ttf.nuget.2.20.2\build\native\sdl2_ttf.nuget.targets" Condition="Exists('..\packages\sdl2_ttf.nuget.2.20.2\build\native\sdl2_ttf.nuget.targets')" />
+    <Import Project="..\packages\sdl2.nuget.redist.2.26.5\build\native\sdl2.nuget.redist.targets" Condition="Exists('..\packages\sdl2.nuget.redist.2.26.5\build\native\sdl2.nuget.redist.targets')" />
+    <Import Project="..\packages\sdl2.nuget.2.26.5\build\native\sdl2.nuget.targets" Condition="Exists('..\packages\sdl2.nuget.2.26.5\build\native\sdl2.nuget.targets')" />
+    <Import Project="..\packages\sdl2_mixer.nuget.redist.2.6.3\build\native\sdl2_mixer.nuget.redist.targets" Condition="Exists('..\packages\sdl2_mixer.nuget.redist.2.6.3\build\native\sdl2_mixer.nuget.redist.targets')" />
+    <Import Project="..\packages\sdl2_mixer.nuget.2.6.3\build\native\sdl2_mixer.nuget.targets" Condition="Exists('..\packages\sdl2_mixer.nuget.2.6.3\build\native\sdl2_mixer.nuget.targets')" />
+  </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\sdl2.redist.2.0.5\build\native\sdl2.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\sdl2.redist.2.0.5\build\native\sdl2.redist.targets'))" />
+    <Error Condition="!Exists('..\packages\sdl2.2.0.5\build\native\sdl2.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\sdl2.2.0.5\build\native\sdl2.targets'))" />
+    <Error Condition="!Exists('..\packages\sdl2_image.nuget.redist.2.6.3\build\native\sdl2_image.nuget.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\sdl2_image.nuget.redist.2.6.3\build\native\sdl2_image.nuget.redist.targets'))" />
+    <Error Condition="!Exists('..\packages\sdl2_image.nuget.2.6.3\build\native\sdl2_image.nuget.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\sdl2_image.nuget.2.6.3\build\native\sdl2_image.nuget.targets'))" />
+    <Error Condition="!Exists('..\packages\sdl2_ttf.nuget.redist.2.20.2\build\native\sdl2_ttf.nuget.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\sdl2_ttf.nuget.redist.2.20.2\build\native\sdl2_ttf.nuget.redist.targets'))" />
+    <Error Condition="!Exists('..\packages\sdl2_ttf.nuget.2.20.2\build\native\sdl2_ttf.nuget.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\sdl2_ttf.nuget.2.20.2\build\native\sdl2_ttf.nuget.targets'))" />
+    <Error Condition="!Exists('..\packages\sdl2.nuget.redist.2.26.5\build\native\sdl2.nuget.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\sdl2.nuget.redist.2.26.5\build\native\sdl2.nuget.redist.targets'))" />
+    <Error Condition="!Exists('..\packages\sdl2.nuget.2.26.5\build\native\sdl2.nuget.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\sdl2.nuget.2.26.5\build\native\sdl2.nuget.targets'))" />
+    <Error Condition="!Exists('..\packages\sdl2_mixer.nuget.redist.2.6.3\build\native\sdl2_mixer.nuget.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\sdl2_mixer.nuget.redist.2.6.3\build\native\sdl2_mixer.nuget.redist.targets'))" />
+    <Error Condition="!Exists('..\packages\sdl2_mixer.nuget.2.6.3\build\native\sdl2_mixer.nuget.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\sdl2_mixer.nuget.2.6.3\build\native\sdl2_mixer.nuget.targets'))" />
+  </Target>
+</Project>
